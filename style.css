@@ -1,0 +1,594 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: darkslategray;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  position: absolute;
+}
+
+#logo {
+  color: white;
+  font-family: "Abril Fatface";
+  text-decoration: none;
+}
+
+.nav-header {
+  position: relative;
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0rem;
+  z-index: 2;
+}
+
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: darkslategray;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 5rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.hero-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 2.6rem;
+}
+
+.hero-desc p {
+  padding: 3rem 0rem;
+  font-size: 1.3125rem;
+  color: white;
+}
+
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 55;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-span {
+  color: rgb(163, 184, 163);
+}
+.mountain-span {
+  color: rgb(151, 162, 176);
+}
+.hike-span {
+  color: rgb(177, 163, 130);
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.nav-container {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 1.3125rem;
+  flex-basis: 30rem;
+}
+
+.nav-links h3 {
+  padding: 2rem 0rem;
+}
+
+.contact {
+  flex-basis: 13rem;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: darkslategray;
+  left: 0;
+  top: -15;
+}
+
+.cursor {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: ease-in-out 0.5s ease;
+  transition-property: background, transform;
+  transform-origin: 95% 95%;
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+}
+
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t-swipe1 {
+  background: rgb(151, 162, 176);
+}
+
+.t-swipe2 {
+  background: rgb(177, 163, 130);
+}
+
+.t-swipe3 {
+  background: rgb(163, 184, 163);
+}
+
+.cursor.nav-active {
+  background: rgb(151, 162, 176);
+  transform: scale(2);
+}
+
+.cursor.explore-active {
+  background: white;
+  transform: scale(2);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+/* Fashion Page */
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 11rem;
+}
+
+.fashion-img {
+  height: 40vh;
+  flex-basis: 20rem;
+}
+
+.fashion-text {
+  margin-top: 6rem;
+  flex: 1;
+  position: relative;
+  flex-basis: 15rem;
+  padding-right: 2rem;
+}
+
+.fashion-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 7rem;
+}
+
+.fashion-text h1 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+
+.fashion-text p {
+  font-size: 1.3125rem;
+}
+
+.fashion1 h1 {
+  color: rgb(151, 162, 176);
+}
+
+.fashion2 h1 {
+  color: rgb(177, 163, 130);
+}
+
+.fashion3 h1 {
+  color: rgb(163, 184, 163);
+}
+
+/* Hike Page */
+.hike1,
+.hike2,
+.hike3 {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 11rem;
+}
+
+.hike-img {
+  height: 40vh;
+  flex-basis: 20rem;
+}
+
+.hike-text {
+  margin-top: 6rem;
+  flex: 1;
+  position: relative;
+  flex-basis: 15rem;
+  padding-right: 2rem;
+}
+
+.hike-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 7rem;
+}
+
+.hike-text h1 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+
+.hike-text p {
+  font-size: 1.3125rem;
+}
+
+.hike1 h1 {
+  color: rgb(151, 162, 176);
+}
+
+.hike2 h1 {
+  color: rgb(177, 163, 130);
+}
+
+.hike3 h1 {
+  color: rgb(163, 184, 163);
+}
+
+/* Mountain Page */
+.mountain1,
+.mountain2,
+.mountain3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.mountain-img {
+  height: 50vh;
+  flex-basis: 30rem;
+}
+
+.mountain-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 10rem;
+  padding-right: 2rem;
+}
+
+.mountain-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.mountain-text h1 {
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+}
+
+.mountain-text p {
+  font-size: 1.3125rem;
+}
+
+.mountain1 h1 {
+  color: rgb(151, 162, 176);
+}
+
+.mountain2 h1 {
+  color: rgb(177, 163, 130);
+}
+
+.mountain3 h1 {
+  color: rgb(163, 184, 163);
+}
+
+/* transition swipes */
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe1 {
+  background: rgb(163, 184, 163);
+  z-index: 5;
+}
+
+.swipe2 {
+  background: rgb(151, 162, 176);
+  z-index: 4;
+}
+
+.swipe3 {
+  background: rgb(177, 163, 130);
+  z-index: 3;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    padding: 0;
+  }
+  .hero-img {
+    padding: 2rem;
+  }
+  .hero-desc h2 {
+    font-size: 1.6rem;
+  }
+  .hero-desc p {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .explore {
+    width: 40%;
+    margin: auto;
+  }
+  /* Fashion Page */
+
+  .fashion1,
+  .fashion2,
+  .fashion3 {
+    transform: translateY(-15%);
+    display: block;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .fashion-text {
+    padding: 0rem 2rem;
+  }
+  .fashion-text p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .fashion-text h1 {
+    text-align: center;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+
+  .fashion-img {
+    padding: 2rem 9rem;
+    height: 100%;
+  }
+  .fashion-img img {
+    height: auto;
+    width: 35vh;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  /* Hike Page */
+
+  .hike1,
+  .hike2,
+  .hike3 {
+    transform: translateY(-15%);
+    display: block;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .hike-text {
+    padding: 0rem 2rem;
+  }
+  .hike-text p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .hike-text h1 {
+    text-align: center;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+
+  .hike-img {
+    padding: 2rem 9rem;
+    height: 100%;
+  }
+  .hike-img img {
+    height: auto;
+    width: 35vh;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  /* Mountain Page */
+
+  .mountain1,
+  .mountain2,
+  .mountain3 {
+    transform: translateY(10%);
+    display: block;
+    width: 100%;
+    align-items: center;
+  }
+  .mountain-text {
+    padding: 0rem 2rem;
+  }
+  .mountain-text p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .mountain-text h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .mountain-img {
+    padding: 2rem 3.5rem;
+    height: 100%;
+  }
+  .mountain-img img {
+    height: auto;
+    width: 60vh;
+  }
+
+  /* nav */
+
+  .nav-bar {
+    margin-bottom: 0;
+    padding-bottom: 0rem;
+  }
+  .nav-links {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .contact h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .contact p {
+    font-size: 1.2rem;
+    width: 400px;
+    padding: 0rem;
+  }
+}
